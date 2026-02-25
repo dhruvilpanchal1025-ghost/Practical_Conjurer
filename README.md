@@ -49,7 +49,7 @@ For JavaScript
 Line 153      <script> opens
 Line 154      (function(){ — wraps everything in IIFE to avoid polluting global scope
 
-━━━ CANVAS SETUP (160–174) ━━━
+ CANVAS SETUP (160–174) 
 Line 160      Get canvas element + 2D drawing context
 Line 162      resize() — sets canvas width/height to window size
 Line 163      Listens for window resize to keep canvas full screen
@@ -57,7 +57,7 @@ Line 165      N = 3000 — total particle count
 Line 166–169  Float32Arrays — typed arrays for x/y/z position, target, phase, color (faster than regular arrays)
 Line 171–174  Initialize particles at random positions and random phase offsets
 
-━━━ TEMPLATES (179–222) ━━━
+ TEMPLATES (179–222) 
 Line 179      NAMES array — display names for each shape
 Line 180–210  TMPLS array — 8 arrow functions, each takes (i, n) and returns [x, y, z]
               Line 181    Heart — parametric heart curve formula
@@ -79,7 +79,7 @@ Line 231      Event listeners on all 8 .tb buttons → call switchTemplate
 
 Line 233–238  updateColors() — lerps between palette colors based on colorShift value
 
-━━━ 3D + MOUSE CONTROLS (241–262) ━━━
+  3D + MOUSE CONTROLS (241–262) 
 Line 241–244  rotX/Y, drag, zoom — state variables for orbit control
 Line 246      mousedown — start drag, record mouse position
 Line 247      mousemove — if dragging, update target rotation angles
@@ -93,7 +93,7 @@ Line 254–262  project(x,y,z) — the 3D math:
               Step 3: perspective divide — far objects get smaller scale
               Returns: [screenX, screenY, depth, scale]
 
-━━━ RENDER LOOP (265–301) ━━━
+   RENDER LOOP (265–301) 
 Line 265      (function loop(){ requestAnimationFrame(loop) — runs 60 times/second
 Line 267      Smooth rotX/Y toward target (easing)
 Line 268      Auto-spin slowly when not dragging
@@ -109,7 +109,7 @@ Line 284      Sort all 3000 particles by Z depth (back to front)
 Line 286–295  Draw each particle as a radial gradient glow circle
 Line 298–300  Update expansion meter bar and value text in UI
 
-━━━ GESTURE ENGINE (303–568) ━━━
+   GESTURE ENGINE (303–568) 
 Line 303–316  Get all the DOM elements needed for camera UI
 
 Line 318–325  isFingerExtended(lms, tipIdx, mcpIdx)
