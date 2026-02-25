@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>✦ Particle Conjurer</title>
-<style>
+<style>  /* CSS  start */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#000;overflow:hidden;font-family:'Orbitron',monospace;color:#fff;user-select:none}
@@ -151,6 +151,7 @@ body{background:#000;overflow:hidden;font-family:'Orbitron',monospace;color:#fff
 <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1646424915/hands.js" crossorigin="anonymous"></script>
 
 <script>
+  //  JAVASCRIPT  start
 (function(){
 'use strict';
 
@@ -549,7 +550,7 @@ function setupKeyboardFallback(){
 
   document.addEventListener('keydown', e=>{
     if(e.key==='o'||e.key==='O'){ targetExpansion=Math.min(3.5,targetExpansion+.3); applyGesture('open'); }
-    if(e.key==='c'||e.key==='C'){ targetExpansion=Math.max(.15,targetExpansion-.3); applyGesture('fist'); }
+    if(e.key==='f'||e.key==='F'){ targetExpansion=Math.max(.15,targetExpansion-.3); applyGesture('fist'); }
     if(e.key==='n'||e.key==='N'){ applyGesture('point'); }
     if(e.key==='p'||e.key==='P'){ applyGesture('pinch'); }
   });
